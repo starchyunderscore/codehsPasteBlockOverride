@@ -5,10 +5,6 @@ const EVENTS = {
   INPUT: new Event("input", EVENT_OPTIONS),
 };
 
-function sleep(ms) {
-  return new Promise(resolve => setTimeout(resolve, ms));
-}
-
 function overrideListeners(eventType) {
   window.addEventListener(eventType, function(event) {
       event.stopImmediatePropagation();
